@@ -1,0 +1,408 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+font-family: Arial, Helvetica, sans-serif, tahoma;}
+
+body
+{
+    perspective: 400px;
+}
+.container
+{
+    width: 1170px;
+    margin: auto;
+}
+
+
+
+
+
+.nav
+{
+    background-color: rgb(17, 17, 26);
+    width: 100%;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.nav h1
+{
+    font-size: 35px;
+    float: left;
+    text-transform: uppercase;
+}
+.nav h1 span
+{
+    color: rgb(0, 143, 24);
+}
+.nav ul li
+{
+    float: right;
+    padding: 30px;
+    margin: 0;
+    
+}
+.nav ul li:hover
+{
+    background-color:rgb(0, 143, 24);
+    padding-bottom: 40px;
+}
+.navpar
+{
+    position: relative;
+    display: flex;
+}
+
+.navpar .Sidebar
+{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 750px;
+    background-color:#11111A;
+    border: 1px solid #000000;
+    transition: all .5s ease-in-out;
+
+
+}
+.navpar .Sidebar h3
+{
+    color: rgb(0, 143, 24);
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    line-height: 50px;
+    user-select: none;
+
+}
+.navpar .Sidebar span{
+    display: block;
+    color: rgb(0, 143, 24);
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    line-height: 50px;
+    user-select: none;
+    padding-top: 20px;
+}
+
+
+
+.navpar .Sidebar hr
+{
+display: block;    color: #1f1e1e;
+}
+.navpar .Sidebar ul a
+{
+    display: block;
+    padding-left: 20px;
+    width: 100%;
+    height: 70%;
+    color: #5e5e5e;
+    font-size: 30px;
+    line-height: 56px;
+    text-transform: capitalize;
+    transition: all .4s ease-in-out;
+    border-bottom:1px solid #1f1e1e;
+}
+.navpar .Sidebar ul li:hover 
+{
+background-color: #1f1e1e;}
+.navpar .Sidebar ul li:hover a
+{
+    padding-left: 40px;
+
+    color: #cac8c8;
+
+}
+
+.navpar .Sidebar audio
+{
+width: 200px;
+height: 100px;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.navpar .Sidebar h4{
+    padding-top: 20px;
+    padding-right: 20px;
+  text-align: right;
+    color: #5e5e5e;
+    font-size: 20px;
+   
+}
+
+
+#check
+{
+    display: none;
+}
+
+label #btn, label #cancel{
+    cursor: pointer;
+    position: absolute;
+
+   
+}
+
+label #btn
+{
+    transition: all .4s ease-in-out;
+    padding-top: 0;
+
+}
+
+label #cancel
+{
+    z-index: 1111;
+    left: -195px;
+    width: 30px;
+    height: 30px;
+    transition: .4s;
+    margin-left: 20px;
+
+    background-color: #5e5e5e;
+    ;
+
+}
+
+#check:checked ~.navpar .Sidebar
+{
+    left: 0;
+}
+#check:checked ~ label #btn
+{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~label #cancel
+{
+    left: 190px;
+}
+
+.row
+{
+    overflow: hidden;
+    background-color: #d6d6d6;
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.row .rows
+{
+    width: 25%;
+    float: right;
+}
+.row .rows h3
+{
+    font-size: 30px;
+    color: #1f1e1e;
+    float: right;
+    padding-right: 30px;
+
+}
+
+.row .rows p
+{
+    font-size: 20px;
+    color: #3a3939;
+    padding-top: 10px;
+    margin-right: 20px;
+    text-align: right;
+    float: right;
+}
+
+.row .rows img
+{
+    width: 100%;
+    height: 150px;
+    padding-top: 20px;
+padding: 20px;
+transition: all .4s ease-in-out;
+transform-style: preserve-3d;
+cursor: pointer;
+}
+
+.row .rows img:hover
+{
+    transform: translateZ(-5px);
+}
+
+
+.row .rows button,.main .spac button
+
+{
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: rgb(150, 48, 1);
+    padding: 10px 20px;
+    margin-top: 20px;
+    float: right;
+    cursor: pointer;
+}
+
+.row .rows button:hover
+{
+    background-color: rgb(246, 112, 50);
+
+}
+.main .spac button:hover
+{
+    background-color: rgb(246, 112, 50);
+
+}
+.main
+{
+    overflow: hidden;
+    background-color: #d6d6d6;
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.main .spac
+{
+    width: 40%;
+    float: right;
+}
+.main .spac h3
+{
+    font-size: 30px;
+    color: #1f1e1e;
+    text-align: right;
+}
+
+
+.main .spac span
+{
+    display: block;
+    font-size: 20px;
+    color: #3a3939;
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.main .spac p
+{
+    font-size: 20px;
+    color: #3a3939;
+    padding-bottom: 30px;
+    text-align: right;
+    padding-top: 10px;
+
+}
+
+
+.main  .spaser
+
+{
+    width: 60%;
+    text-align: right;
+    padding-right: 80px;
+
+    margin-bottom: 50px;
+
+}
+
+.main .spaser h3{
+    font-size: 30px;
+    color: #1f1e1e;
+    padding-bottom: 20px;
+}
+.main .spaser img
+{
+    width:150px;
+    height: 150px;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border:1px solid #1f1e1e;
+    padding: 2px;
+}
+
+
+
+.main .spaser p{
+    color: #3a3939;
+    font-size: 20px;
+    padding-top: 10px;
+}
+.spaserwe
+{
+    width: 100%;
+    background-color: #d6d6d6;
+    overflow: hidden;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    
+
+}
+
+.spaserwe .link
+{
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+.spaserwe .link h3{
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #1f1e1e;
+}
+.spaserwe .link ul li
+{
+    display: block;
+    line-height: 20px;
+    padding-bottom: 40px;
+}
+.spaserwe .link ul a
+{
+    color: #1f1e1e;
+    font-size: 30px;
+    float: right;
+}
+.spaserwe .link ul a:hover
+{
+    color: #797979;
+}
+
+
+.vedo
+{
+    overflow: hidden;
+    width: 100%;
+    background-color: #1d1d1d;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.vedo h3
+{
+    color: #9b9999;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: right;
+    padding-bottom: 20px;
+
+}
+
+
+.vedo .videos
+{
+    width: 33.333%;
+    float: right;
+    text-align: right;
+}
+.vedo .videos h3
+{
+    font-size: 30px;
+    color: #5d5c5c;
+    padding-bottom: 20px;
+}
